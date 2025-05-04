@@ -731,6 +731,26 @@
 
 
     }
+    @media (max-width: 768px) {
+      .review-carousel {
+        padding: 0 10px;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+
+      .review-box {
+        min-width: 90vw !important;
+        max-width: 90vw !important;
+        margin: 0 auto;
+      }
+
+      .carousel-btn.left,
+      .carousel-btn.right {
+        display: none;
+      }
+    }
+
   </style>
   <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
 
