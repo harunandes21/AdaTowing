@@ -87,6 +87,7 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 20px rgba(0,0,0,0.4);
       padding: 15px 0;
+      min-height: 76px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -114,6 +115,9 @@
       color: #dbeafe;
       font-weight: 500;
       transition: all 0.3s ease;
+    }
+    .navbar-collapse {
+      transition: none !important; /* prevent shift animation */
     }
 
     .navbar-nav .nav-link:hover,
@@ -162,7 +166,7 @@
     }
 
     .sticky-call:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) translateZ(0); will-change: transform;
       background: #1e4d85;
     }
 
@@ -233,8 +237,34 @@
     }
     .review-carousel-wrapper-wrapper {
       position: relative;
-      overflow: visible;
+      overflow: hidden;
     }
+    @media (max-width: 768px) {
+      .review-carousel-wrapper-wrapper {
+        overflow-x: hidden;
+        padding: 0 10px;
+      }
+
+      .review-carousel-wrapper {
+        padding: 10px 0; /* remove side padding to prevent horizontal scroll */
+      }
+
+      .review-carousel {
+        gap: 10px; /* tighten gap on smaller screens */
+      }
+
+      .review-box {
+        min-width: 90%; /* ensures only one box shows at a time */
+        max-width: 95%;
+        margin: 0 auto;
+      }
+
+      .carousel-btn.left,
+      .carousel-btn.right {
+        display: none; /* optional: hide arrows on mobile */
+      }
+    }
+
 
 
 
@@ -406,7 +436,7 @@
 
     .review-box {
       min-width: 280px;
-      max-width: 300px;
+      max-width: 298px;
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 12px;
@@ -666,8 +696,8 @@
 
     }
   </style>
-  <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
 
+  <link rel="preload" as="image" href="/images/hero.webp" type="image/webp">
 </head>
 
 <body>
@@ -723,7 +753,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="images/log.webp" alt="ADA Logo" class="me-2">
+      <img src="images/log.webp" alt="ADA Logo" width="45" height="45" class="me-2">
       <span>ADA Towing</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -1057,16 +1087,29 @@
   function scrollReviews(direction) {
     const container = document.getElementById('reviewCarousel');
     const reviewBox = container.querySelector('.review-box');
-    const scrollAmount = reviewBox.offsetWidth + 20; // include gap
-    container.scrollBy({
-      left: direction * scrollAmount * 3, // scroll by 3 cards at a time
-      top: 0,
-      behavior: 'smooth'
-    });
+    const scrollAmount = reviewBox.offsetWidth + 20; // include margin/gap
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+    if (direction === -1 && container.scrollLeft <= 0) {
+      // Don't scroll left if already at start
+      return;
+    }
+
+    if (direction === 1 && container.scrollLeft + scrollAmount >= maxScrollLeft) {
+      // If at or near the end, go back to start
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      // Normal scroll
+      container.scrollBy({
+        left: direction * scrollAmount * 3,
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   }
-
-
 </script>
+
 
 
 <script src="js/validation.js"></script>
