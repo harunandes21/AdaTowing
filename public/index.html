@@ -8,7 +8,7 @@
       "@context": "https://schema.org",
       "@type": "AutoRepair",
       "name": "ADA Towing",
-      "image": "https://adatow.com/images/log.png",
+      "image": "https://adatow.com/images/log.webp",
       "url": "https://adatow.com",
       "telephone": "+1-650-441-7521",
       "address": {
@@ -19,7 +19,7 @@
         "addressCountry": "US"
       },
       "openingHours": "Mo-Su 00:00-23:59",
-      "description": "ADA Towing provides fast, affordable 24/7 towing and roadside help across the Bay Area and San Rosa. Flat tire? Dead battery? Locked out? We're nearby."
+      "description": "ADA Towing provides fast, affordable 24/7 towing and roadside help across the Bay Area. Flat tire? Dead battery? Locked out? We're nearby."
     }
   </script>
 
@@ -29,35 +29,42 @@
   <title>ADA Towing | 24/7 Towing & Roadside Help in Bay Area</title>
 
 
-  <meta name="title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area & San Rosa">
-  <meta name="description" content="ADA Towing (aka Ada Tow) offers fast and affordable 24/7 towing and roadside assistance across the Bay Area and San Rosa. Flat tire, dead battery, lockout, fuel delivery—we're nearby and ready to help.">
-  <meta name="keywords" content="ada towing, ada tow, towing San Rosa, bay area towing, roadside assistance, flat tire, jumpstart, dead battery, car lockout, towing company near me">
+  <meta name="title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area">
+  <meta name="description" content="ADA Towing (aka Ada Tow) offers fast and affordable 24/7 towing and roadside assistance across the Bay Area. Flat tire, dead battery, lockout, fuel delivery—we're nearby and ready to help.">
+  <meta name="keywords" content="ada towing, ada tow, bay area towing, roadside assistance, flat tire, jumpstart, dead battery, car lockout, towing company near me">
   <meta name="author" content="ADA Towing">
   <meta name="robots" content="index, follow">
 
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://adatow.com" />
-  <meta property="og:title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area & San Rosa" />
-  <meta property="og:description" content="Stuck on the road? ADA Towing provides reliable towing & roadside services across San Rosa and the Bay Area — 24/7 help for flat tires, dead batteries, lockouts, and more." />
-  <meta property="og:image" content="https://adatow.com/images/og-cover.png" /> <!-- Replace if needed -->
+  <meta property="og:title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area" />
+  <meta property="og:description" content="Stuck on the road? ADA Towing provides reliable towing & roadside services across the Bay Area — 24/7 help for flat tires, dead batteries, lockouts, and more." />
+  <meta property="og:image" content="https://adatow.com/images/og-cover.webp" /> <!-- Replace if needed -->
   <meta property="og:site_name" content="ADA Towing" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://adatow.com" />
-  <meta name="twitter:title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area & San Rosa" />
+  <meta name="twitter:title" content="ADA Towing | 24/7 Towing & Roadside Help in Bay Area" />
   <meta name="twitter:description" content="Fast, affordable, and always nearby. Call ADA Towing for 24/7 towing & roadside assistance across the Bay Area." />
-  <meta name="twitter:image" content="https://adatow.com/images/og-cover.png" />
+  <meta name="twitter:image" content="https://adatow.com/images/og-cover.webp" />
 
 
   <link rel="me" href="https://www.instagram.com/ada.towing" />
 
 
   <!-- Fonts & Bootstrap -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <style>
@@ -172,7 +179,7 @@
     }
 
     .hero {
-      background: url('images/hero.png') no-repeat center center;
+      background: url('images/hero.webp') no-repeat center center;
       background-size: cover;
       height: 550px;
       display: flex;
@@ -180,6 +187,7 @@
       justify-content: center;
       position: relative;
       text-align: center;
+      min-height: 400px;
     }
 
     .hero::after {
@@ -223,6 +231,11 @@
       position: relative;
       overflow: hidden;
     }
+    .review-carousel-wrapper-wrapper {
+      position: relative;
+      overflow: visible;
+    }
+
 
 
 
@@ -358,6 +371,80 @@
       color: #3f8be3; /* match your theme blue */
       border-bottom: 2px solid #3f8be3;
       padding-bottom: 6px;
+    }
+
+    .review-carousel-wrapper {
+      max-width: 1050px; /* enough to hold 3 boxes + gaps */
+      margin: 0 auto;
+      padding: 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .review-carousel {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .review-box {
+      scroll-snap-align: start;
+    }
+    .review-carousel {
+      scrollbar-width: none; /* Firefox */
+    }
+    .review-carousel::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+
+
+    .review-carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px;
+    }
+
+    .review-box {
+      min-width: 280px;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex: 0 0 auto;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+      background: #3f8be3;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .carousel-btn:hover {
+      background: #1e4d85;
+    }
+
+    .carousel-btn.left {
+      left: 0px;
+    }
+
+    .carousel-btn.right {
+      right: 0px;
     }
 
 
@@ -575,9 +662,14 @@
         bottom: 20px;
       }
 
+
+
     }
   </style>
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
+
 </head>
+
 <body>
 <!-- Toast Notification -->
 <!-- Success Toast Notification -->
@@ -631,7 +723,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="images/log.png" alt="ADA Logo" class="me-2">
+      <img src="images/log.webp" alt="ADA Logo" class="me-2">
       <span>ADA Towing</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -806,7 +898,7 @@
         <div class="contact-wrap p-5 fade-in">
           <div class="row align-items-center">
             <div class="col-md-5 text-center mb-4 mb-md-0">
-              <img src="images/log.png" alt="ADA Towing Logo" class="img-fluid" style="max-height: 300px;">
+              <img src="images/log.webp" alt="ADA Towing Logo" class="img-fluid" style="max-height: 300px;">
             </div>
             <div class="col-md-7">
               <h2 class="text-white text-center mb-4">Send Us a Message</h2>
@@ -864,15 +956,34 @@
 
 <section class="py-5 bg-dark text-white text-center">
   <div class="container">
-    <h2 class="mb-4 fade-in">Customer Reviews</h2>
-    <div class="row justify-content-center mb-4">
-      <div class="col-md-8">
-        <div class="review-card fade-in">
-          <p>"Absolutely the best towing service I've used. Quick, polite, and fair priced!"</p>
-          <small>- Juan M., Oakland</small>
+      <div class="container">
+        <h2 class="mb-4 fade-in">Customer Reviews</h2>
+        <div class="review-carousel-wrapper-wrapper">
+          <div class="review-carousel-wrapper">
+            <button class="carousel-btn left" onclick="scrollReviews(-1)">&#10094;</button>
+            <div class="review-carousel" id="reviewCarousel">
+              <div class="review-box">"Absolutely fantastic service! I was stuck good in the mud but he managed to get me out quickly after a few back and forths with the car. So thankful!"<br><small>- Trenton H.</small></div>
+              <div class="review-box">"Extremely punctual, efficient and polite. I thoroughly recommend using ADA Towing. Made a stressful situation so much easier!"<br><small>- Lisa S</small></div>
+              <div class="review-box">"Friendly staff and great communication while waiting for my tow. My car was delivered safely to the shop with no problems or issues. Highly recommend..."<br><small>- Judy P</small></div>
+              <div class="review-box">"Arrived on time You did what he was supposed to do very business like very well mannered when above and beyond."<br><small>- Glenda A.</small></div>
+              <div class="review-box">"Overall great service, on time, very helpful/professional and quick!"<br><small>- Vince M</small></div>
+              <div class="review-box">"Driver went way above and beyond to accommodate our towing needs to get us to our location. He was super friendly thorough. I will highly recommend!"<br><small>- Karen M</small></div>
+              <div class="review-box">"Emir was awesome! Within 30 minutes of requesting service, Emir was at the house to pick up our vehicle. Polite, friendly and incredibly professional. I give ADA towing my highest recommendation."<br><small>- Scott T</small></div>
+              <div class="review-box">"Emir was very professional, efficient, and friendly. I appreciate his excellent communication and quality service."<br><small>- Julia R</small></div>
+              <div class="review-box">"Car issues while on the road is horrible. Tow truck drivers are useful in many more ways than simply driving. They are problem solvers. Emirhan of ADA Towing is the best of them..."<br><small>- Chelsea C</small></div>
+
+            </div>
+            <button class="carousel-btn right" onclick="scrollReviews(1)">&#10095;</button>
+          </div>
         </div>
-      </div>
-    </div>
+        <div class="mt-4">
+          <a href="https://www.google.com/search?sca_esv=2466ec0482079bcb&hl=en&biw=1470&bih=832&sxsrf=AHTn8zoa4GnfFBWLWhBk12ARHC3XvQ3REA:1746335266960&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzXDq107Tq0ei-yR7qULfLZY7Vd9S1UVuRxwg6S1HLp4Ijv2Kks9LmrgOAHkXl1EnGZyB8In7TU9qKegiagWFOO7Js9VWoQFahWwiFcB-NsjozAB1t8ncOWaQQaA1-oq2ZadwYKg%3D&q=ADA+Towing+%26+Roadside+Assistance+Reviews&sa=X&ved=2ahUKEwjMzfvphYmNAxVaE0QIHbrNEskQ0bkNegQIHxAD" target="_blank" class="btn btn-theme">
+            ★ Read All Reviews on Google
+          </a>
+        </div>
+
+</section>
+
     <div class="section-glow-line"></div>
     <div class="transition-stripe full-width-stripe">
 
@@ -882,7 +993,7 @@
     <section id="coverage" class="py-5 bg-dark text-white text-center">
       <div class="container">
         <h2 class="mb-4 fade-in">Our Coverage Area</h2>
-        <p class="lead fade-in">Proudly Serving The Entire Bay Area and San Rosa.</p>
+        <p class="lead fade-in">Proudly Serving The Entire Bay Area.</p>
         <iframe
                 class="map-frame"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d399835.00318532187!2d-122.41388836302283!3d38.193129161458444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA!5e0!3m2!1sen!2sus!4v1744352815970!5m2!1sen!2sus"
@@ -901,13 +1012,13 @@
 
 <footer class="text-white">
   <div class="text-center mb-4">
-    <img src="images/log.png" alt="ADA Logo" style="max-height: 100px;">
+    <img src="images/log.webp" alt="ADA Logo" style="max-height: 100px;">
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
         <h5>ADA Towing - Bay Area</h5>
-        <p>Providing fast and trusted towing & roadside assistance across The Entire Bay Area and San Rosa.</p>
+        <p>Providing fast and trusted towing & roadside assistance across The Entire Bay Area.</p>
       </div>
       <div class="col-md-6 text-md-end">
         <p><i class="fas fa-phone"></i> (650) 441-7521</p>
@@ -942,6 +1053,22 @@
     appearOnScroll.observe(fader);
   });
 </script>
+
+<script>
+  function scrollReviews(direction) {
+    const container = document.getElementById('reviewCarousel');
+    const reviewBox = container.querySelector('.review-box');
+    const scrollAmount = reviewBox.offsetWidth + 20; // include gap
+    container.scrollBy({
+      left: direction * scrollAmount * 3, // scroll by 3 cards at a time
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+
+</script>
+
 
 <script src="js/validation.js"></script>
 

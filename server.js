@@ -3,11 +3,15 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const compression = require('compression');
 
 app.use(cors());
 app.use(express.static('public')); // serve your frontend
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(compression());
+
 
 app.post('/api/contact', async (req, res) => {
     const { name, email, pnumber, message } = req.body;  // ✅ fixed
