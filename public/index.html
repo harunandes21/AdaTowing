@@ -682,7 +682,6 @@
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        position: relative;
       }
 
       .review-carousel::-webkit-scrollbar {
@@ -701,38 +700,27 @@
         display: none !important;
       }
 
-      /* Edge fading effect */
-      .review-carousel-wrapper::before,
-      .review-carousel-wrapper::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 30px;
-        height: 100%;
-        z-index: 1;
-        pointer-events: none;
-      }
-
-      .review-carousel-wrapper::before {
-        left: 0;
-        background: linear-gradient(to right, #0f172a, transparent);
-      }
-
-      .review-carousel-wrapper::after {
-        right: 0;
-        background: linear-gradient(to left, #0f172a, transparent);
-      }
-
-      /* Hint text */
-      .scroll-hint {
-        display: block;
+      /* Swipe hint */
+      .swipe-hint {
         text-align: center;
-        font-size: 14px;
         color: #94a3b8;
-        margin-top: 10px;
-        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        animation: swipe-bounce 2s ease-in-out 1;
+      }
+
+      @keyframes swipe-bounce {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(8px); }
+        50% { transform: translateX(-8px); }
+        100% { transform: translateX(0); }
       }
     }
+
 
 
 
@@ -1034,10 +1022,13 @@
       <div class="container">
         <h2 class="mb-4 fade-in">Customer Reviews</h2>
         <div class="review-carousel-wrapper-wrapper">
+          <div class="swipe-hint d-md-none">
+            <span class="emoji">👉</span>
+            <span>Swipe to see more</span>
+          </div>
+
           <div class="review-carousel-wrapper">
-            <div class="scroll-hint d-md-none">
-              👉 Swipe to see more reviews
-            </div>
+
             <button class="carousel-btn left" onclick="scrollReviews(-1)">&#10094;</button>
             <div class="review-carousel" id="reviewCarousel">
               <div class="review-box">"Absolutely fantastic service! I was stuck good in the mud but he managed to get me out quickly after a few back and forths with the car. So thankful!"<br><small>- Trenton H.</small></div>
@@ -1153,6 +1144,19 @@
   }
 
 </script>
+
+<script>
+  window.addEventListener('load', () => {
+    const container = document.getElementById('reviewCarousel');
+    if (window.innerWidth < 768) {
+      container.scrollBy({ left: 50, behavior: 'smooth' });
+      setTimeout(() => {
+        container.scrollBy({ left: -50, behavior: 'smooth' });
+      }, 1200);
+    }
+  });
+</script>
+
 
 
 
