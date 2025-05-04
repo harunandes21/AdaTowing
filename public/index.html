@@ -139,46 +139,7 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(63, 139, 227, 0.4);
     }
-    @media (max-width: 768px) {
-      .review-carousel-wrapper-wrapper {
-        overflow-x: hidden;
-        padding: 0 10px;
-      }
 
-      .review-carousel-wrapper {
-        padding: 10px 0;
-      }
-
-      .review-carousel {
-        gap: 16px;
-        padding: 0 10px;
-      }
-
-      .review-box {
-        min-width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      .carousel-btn.left,
-      .carousel-btn.right {
-        display: block;
-      }
-      @media (max-width: 768px) {
-        .carousel-btn {
-          width: 50px;
-          height: 50px;
-          font-size: 24px;
-        }
-      }
-
-      .review-carousel {
-        overflow-x: auto;
-        scroll-behavior: smooth;
-      }
-
-
-    }
 
     /* Sticky Call Button */
     .sticky-call {
@@ -275,31 +236,7 @@
       position: relative;
       overflow: hidden;
     }
-    @media (max-width: 768px) {
-      .review-carousel-wrapper-wrapper {
-        overflow-x: hidden;
-        padding: 0 10px;
-      }
 
-      .review-carousel-wrapper {
-        padding: 10px 0; /* remove side padding to prevent horizontal scroll */
-      }
-
-      .review-carousel {
-        gap: 10px; /* tighten gap on smaller screens */
-      }
-
-      .review-box {
-        min-width: 90%; /* ensures only one box shows at a time */
-        max-width: 95%;
-        margin: 0 auto;
-      }
-
-      .carousel-btn.left,
-      .carousel-btn.right {
-        display: none; /* optional: hide arrows on mobile */
-      }
-    }
 
 
 
@@ -706,7 +643,6 @@
       transform: translateY(0);
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .hero {
         height: 450px;
@@ -728,28 +664,46 @@
         bottom: 20px;
       }
 
-
-
-    }
-    @media (max-width: 768px) {
-      .review-carousel {
+      .review-carousel-wrapper-wrapper {
+        overflow-x: hidden;
         padding: 0 10px;
+      }
+
+      .review-carousel-wrapper {
+        padding: 10px 0;
+      }
+
+      .review-carousel {
+        display: flex;
         gap: 12px;
+        padding: 0 10px;
         overflow-x: auto;
         scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+
+      .review-carousel::-webkit-scrollbar {
+        display: none;
       }
 
       .review-box {
         min-width: 90vw !important;
         max-width: 90vw !important;
         margin: 0 auto;
+        scroll-snap-align: start;
       }
 
       .carousel-btn.left,
       .carousel-btn.right {
-        display: none;
+        display: block;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
       }
     }
+
+
+
 
   </style>
   <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
@@ -1067,7 +1021,6 @@
             ★ Read All Reviews on Google
           </a>
         </div>
-
 </section>
 
     <div class="section-glow-line"></div>
