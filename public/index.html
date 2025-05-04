@@ -139,6 +139,46 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(63, 139, 227, 0.4);
     }
+    @media (max-width: 768px) {
+      .review-carousel-wrapper-wrapper {
+        overflow-x: hidden;
+        padding: 0 10px;
+      }
+
+      .review-carousel-wrapper {
+        padding: 10px 0;
+      }
+
+      .review-carousel {
+        gap: 16px;
+        padding: 0 10px;
+      }
+
+      .review-box {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .carousel-btn.left,
+      .carousel-btn.right {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .carousel-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+        }
+      }
+
+      .review-carousel {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+
+
+    }
 
     /* Sticky Call Button */
     .sticky-call {
